@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./static/js.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./static/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="header">Elliptic Curve</header>
+            <article class="main">
+            <div class="operations" id="dotAdd">
+                <h1>Add operation</h1>
+                <h5>b</h5>
+                <input type="number" id="b">
+                <h5>X by first dot</h5>
+                <input type="number" id="x1">
+                <h5>Y by first dot</h5>
+                <input type="number" id="y1">
+                <h5>X by two dot</h5>
+                <input type="number" id="x2">
+                <h5>Y by two dot</h5>
+                <input type="number" id="y2">
+                <button onclick="hello()">add</button>
+            </div>
+            <div class="operations" id="dotMultiPly">
+                <h1>Multiply operation</h1>
+                <h5>b</h5>
+                <input type="number" id="y1">
+                <h5>Count</h5>
+                <input type="number" id="y1">
+                <h5>X</h5>
+                <input type="number" id="x2">
+                <h5>Y</h5>
+                <input type="number" id="y2">
+                <button onclick="hello()">multiply</button>
+            </div>
+            <div class="operations" id="dblOperation">
+                <h1>Dbl operation</h1>
+                <h5>X</h5>
+                <input type="number" id="X">
+                <h5>Y</h5>
+                <input type="number" id="Y">
+                <button onclick="lenstra()">Dbl</button>
+            </div>
+            <div class="operations" id="lenstraAlg">
+                <h1>lenstra</h1>
+                <h5>N</h5>
+                <input type="number" id="n">
+                <h5>Limit</h5>
+                <input type="number" id="limit">
+                <button onclick="lenstra()">Press</button>
+            </div>
+
+            <div id="resultArea">
+                <br>
+                <h5>result:</h5>
+                <input type="text" id="result">
+            </div>
+            </article>
+            <aside class="aside aside-1">
+                <div id="navPanel">
+                    <div onclick="togglePage('dotAdd')" class="navButton">
+                        <span class="navigationSpan">Dot Curve Add Operation</span>
+                    </div>
+                    <div onclick="togglePage('dotMultiPly')" class="navButton">
+                        <span class="navigationSpan">Dot Curve Multiply Operation</span>
+                    </div>
+                    <div onclick="togglePage('lenstraAlg')" class="navButton">
+                        <span class="navigationSpan">Lenstra Algorithm</span>
+                    </div>
+                    <div onclick="togglePage('dblOperation')" class="navButton">
+                        <span class="navigationSpan">Dot Curve Dbl Operation</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </body>
+</html>
